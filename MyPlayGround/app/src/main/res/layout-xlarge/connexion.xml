@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fb="http://schemas.android.com/apk/res-auto"
+    xmlns:google="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.facebook.widget.LoginButton
+                android:id="@+id/facebookLogin"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                fb:login_text="Se connecter avec Facebook"/>
+
+            <com.google.android.gms.common.SignInButton
+                android:id="@+id/googleButton"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_below="@id/facebookLogin"
+
+                android:text="Share on Google+" />
+
+            <com.twitter.sdk.android.core.identity.TwitterLoginButton
+                android:id="@+id/twitterLoginButton"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_below="@+id/googleButton" />
+            
+            <Button
+                android:id="@+id/creerCompte"
+                android:layout_width="match_parent"
+                android:layout_height="305dp"
+                android:background="#000"
+                android:fontFamily="sa"
+                android:text="Créer un compte"
+                android:textColor="#FFF"
+                android:layout_below="@+id/twitterLoginButton"/>
+
+
+        </RelativeLayout>
+        </ScrollView>
+</RelativeLayout>
